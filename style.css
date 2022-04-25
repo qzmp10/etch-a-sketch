@@ -1,3 +1,60 @@
-.container {
-    background-color: rgb(47, 255, 186);
+body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Indie Flower';
+}
+
+.page {
+    background: linear-gradient(blueviolet, #FF6F61FF);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.904);;
+    font-weight: bolder;
+    background-color: blueviolet;
+    margin: 0;
+    padding-top: 48px;
+    font-size: 72px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.904);;
+    font-weight: bolder;
+    background-color: blueviolet;
+    margin: 0;
+    padding-top: 24px;
+    font-size: 36px;
+}
+
+.grid {
+    background-color: #FF6F61FF;
+    opacity: 85%;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 0.3em;
+    border-radius: 8px;
+}
+
+.grid > div {
+    height: 24px;
+    width: 24px;
+    background-color: white;
+}
+
+.hover {
+    background-color: #FEAE51FF;
 }
