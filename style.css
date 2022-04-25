@@ -9,7 +9,7 @@ body, html {
     background: linear-gradient(blueviolet, #FF6F61FF);
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -54,3 +54,10 @@ h3 {
     background-color: white;
 }
 
+.reset {
+    background-color: #FF6F61FF;
+    color: white;
+    border: #FF6F61FF;
+    border-radius: 8px;
+    opacity: 85%;
+}

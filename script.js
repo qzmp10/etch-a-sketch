@@ -1,9 +1,6 @@
 let grid = document.createElement('div');
-
 let page = document.querySelector('.page');
-
 page.appendChild(grid);
-
 grid.classList.add('grid');
 
 //create a 16x16 grid
@@ -31,6 +28,14 @@ let resetColor = () => {
         div.setAttribute('style', 'background-color: white;');
     })
 }
+
+let resetBtn = document.createElement('button');
+resetBtn.classList.add('reset');
+resetBtn.textContent = "Reset Grid Colors";
+page.appendChild(resetBtn);
+
+resetBtn.addEventListener('click', () => resetColor());
+
 
 
 
