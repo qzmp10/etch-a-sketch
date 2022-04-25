@@ -40,7 +40,6 @@ h3 {
 .grid {
     background-color: #FF6F61FF;
     opacity: 85%;
-    padding: 48px;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
@@ -58,6 +57,6 @@ h3 {
     background-color: #FF6F61FF;
     color: white;
     border: #FF6F61FF;
-    border-radius: 8px;
+    border-radius: 4px;
     opacity: 85%;
 }
