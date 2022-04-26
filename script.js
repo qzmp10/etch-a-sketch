@@ -1,3 +1,5 @@
+// GOTTA LOAD THE DEFAULT SIZE OF THE GRID WITH .onload AND MAKE A UNIVERSAL GRID FUNCTION. MAKENEWGRID IDEA IS TRASH.
+
 //creating the grid 
 let grid = document.createElement('div');
 let page = document.querySelector('.page');
@@ -6,55 +8,31 @@ grid.classList.add('grid');
 
 //creating the button that resets the grid color
 let resetBtn = document.createElement('button');
-resetBtn.classList.add('reset');
-resetBtn.textContent = "Reset Grid Colors";
-page.appendChild(resetBtn);
+resetBtn.classList.add('btn');
+resetBtn.textContent = "Reset grid colors";
+page.appendChild(resetBtn)
 
+//create an input button that dictates the size of the grid
+let gridBtn = document.createElement('button');
+gridBtn.classList.add('btn');
+gridBtn.textContent = "Set grid Size";
+page.appendChild(gridBtn);
 
-//function to create a 16x16 grid
-function makeGrid() {
-    for (i=0; i<256; i++) {
-        let item = document.createElement('div');
-        grid.appendChild(item);
+//when user clicks button, prompt for the grid size
+//if grid already has elements, remove them
+gridBtn.addEventListener('click', () => {
+    if(grid.hasChildNodes) { 
+        grid.innerHTML = ''
     }
-}
-makeGrid();
-
-// let each grid piece change to a specific color when a mouseover action is performed
-let divs = grid.querySelectorAll('div');
-
-divs.forEach((div => {
-    div.addEventListener('mouseover', function() {
-    div.setAttribute('style', 'background-color: #FEAE51FF;');
+    let gridSize = prompt('Set a grid size. For example, typing 16 will make a 16x16 grid.');
+    for (i=0; i < gridSize * gridSize; i++) {
+        let gridItem = document.createElement('div');
+        grid.appendChild(gridItem);
+    }
 })
-}));
 
-// function to reset the grid colors to the default
-let resetColor = () => {
-    divs.forEach(div => {
-        div.setAttribute('style', 'background-color: white;');
-    })
-}
+// NEXT UP CHECK HOW TO FIT UR GRID ELEMENTS AUTOMATICALLY TO THE GRID  
 
-
-// divs = grid.querySelectorAll('div')
-// so for each div in grid, remove itself before creating the new grid which has the users input as a base number for the grid
-function makeNewGrid() {
-        divs.forEach(div => {
-            div.remove();
-        })
-    let newGrid = prompt('New grid size? Input a number. Example: 20 will display a 20x20 grid. Cannot be over 20.');
-    for (i=0; i<(newGrid * newGrid); i++) {
-        let item = document.createElement('div');
-        grid.appendChild(item);
-    } 
-}
-
-//what happens when u click the reset colors button
-resetBtn.addEventListener('click', () => {
-resetColor()
-makeNewGrid()
-});
 
 
 

@@ -9,7 +9,8 @@ body, html {
     background: linear-gradient(blueviolet, #FF6F61FF);
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -38,22 +39,19 @@ h3 {
 }
 
 .grid {
+    height: 640px;
+    width: 640px;
     background-color: #FF6F61FF;
     opacity: 85%;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    gap: 0.3em;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .grid > div {
-    height: 24px;
-    width: 24px;
     background-color: white;
 }
 
-.reset {
+.btn {
     background-color: #FF6F61FF;
     color: white;
     border: #FF6F61FF;
