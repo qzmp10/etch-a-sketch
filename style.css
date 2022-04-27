@@ -12,6 +12,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 h1 {
@@ -22,20 +23,22 @@ h1 {
     font-weight: bolder;
     background-color: blueviolet;
     margin: 0;
-    padding-top: 48px;
+    padding-top: 12px;
     font-size: 72px;
+    text-shadow: 0 0 5px white;
 }
 
 h3 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: rgba(255, 255, 255, 0.904);;
     font-weight: bolder;
     background-color: blueviolet;
     margin: 0;
-    padding-top: 12px;
+    padding-bottom: 8px;
     font-size: 36px;
+    text-shadow: 0 0 5px white;
 }
 
 .grid {
@@ -55,6 +58,7 @@ h3 {
     background-color: white;
     width: 32px;
     height: 32px;
+    border-radius: 4px;
 }
 
 .grid > div.thirtytwo {
@@ -62,6 +66,7 @@ h3 {
     background-color: white;
     width: 16px;
     height: 16px;
+    border-radius: 2px;
 }
 
 .grid > div.sixtyfour {
@@ -69,6 +74,7 @@ h3 {
     background-color: white;
     width: 8px;
     height: 8px;
+    border-radius: 1px;
 }
 
 .btncontainer{
@@ -79,8 +85,7 @@ h3 {
 
 .btn {
     font-size: 32px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 12px;
     font-weight: bold;
     font-family: 'Indie Flower';
     background-color: #FF6F61FF;
@@ -88,4 +93,44 @@ h3 {
     border: #FF6F61FF;
     border-radius: 4px;
     opacity: 70%;
+    box-shadow: 0 0 15px white;
+    text-shadow: 0 0 5px white;
+}
+
+.sizeGrid {
+    font-size: 32px;
+    padding: 12px;
+    font-weight: bold;
+    font-family: 'Indie Flower';
+    background-color: #FF6F61FF;
+    color: white;
+    border: #FF6F61FF;
+    border-radius: 4px;
+    opacity: 70%;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 15px #FEAE51FF;
+}
+.reset {
+    width: 600px;
+    font-size: 32px;
+    padding: 12px;
+    font-weight: bold;
+    font-family: 'Indie Flower';
+    background-color: #FF6F61FF;
+    color: white;
+    border: #FF6F61FF;
+    border-radius: 4px;
+    opacity: 70%;
+    box-shadow: 0 0 15px white;
+    text-shadow: 0 0 5px white;
+}
+
+#id {
+    background-color: #FEAE51FF;
+}
+
+.hovered {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px white, 0 0 5px white inset;
+    text-shadow: 0 0 10px white;
 }
